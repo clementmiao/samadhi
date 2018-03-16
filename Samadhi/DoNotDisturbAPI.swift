@@ -10,7 +10,7 @@ import Cocoa
 
 public struct DoNotDisturb {
     private static let appId = "com.apple.notificationcenterui" as CFString
-    
+
     private static func set(_ key: String, value: CFPropertyList?) {
         CFPreferencesSetValue(key as CFString, value, appId, kCFPreferencesCurrentUser, kCFPreferencesCurrentHost)
     }
@@ -21,8 +21,11 @@ public struct DoNotDisturb {
     }
     
     private static func enable() {
-        set("dndStart", value: 0 as CFPropertyList)
-        set("dndEnd", value: 1440 as CFPropertyList)
+        set("dndStart", value: nil)
+        set("dndEnd", value: nil)
+        commitChanges()
+        set("dndStart", value: CGFloat(0) as CFPropertyList)
+        set("dndEnd", value: CGFloat(1440) as CFPropertyList)
         set("doNotDisturb", value: true as CFPropertyList)
         commitChanges()
     }

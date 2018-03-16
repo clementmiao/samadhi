@@ -23,6 +23,9 @@ class StatusMenuController: NSObject {
     @IBAction func focusClicked(_ sender: NSMenuItem) {
         DoNotDisturb.isEnabled = true
     }
+    @IBAction func TurnOff(_ sender: NSMenuItem) {
+        DoNotDisturb.isEnabled = false
+    }
     
     @IBAction func quitClicked(sender: NSMenuItem) {
         NSApplication.shared.terminate(self)

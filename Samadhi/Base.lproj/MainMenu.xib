@@ -26,6 +26,12 @@
                         <action selector="focusClicked:" target="u0G-JK-le1" id="kkO-xK-SmV"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Turn Off" id="I8c-bg-kDb">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="TurnOff:" target="u0G-JK-le1" id="9Xt-GG-LiW"/>
+                    </connections>
+                </menuItem>
                 <menuItem isSeparatorItem="YES" id="fSR-Qd-EeF"/>
                 <menuItem title="Quit" id="g0a-kq-psU">
                     <modifierMask key="keyEquivalentModifierMask"/>
